@@ -1,3 +1,110 @@
 @import "./variables.css";
 @import "./reset.css";
 @import "./typography.css";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  /* min-height: 100vh; */
+}
+
+header,
+main {
+  flex-basis: 50%;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+/* Header */
+.header {
+  background-image: url("../assets/img/grilled-meat.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  backdrop-filter: blur(3px);
+}
+
+/* HEADER CONTAINER */
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEADER STRIP */
+
+.header-strip {
+  position: relative;
+  display: inline-block;
+  padding-top: 14px;
+  margin-bottom: 4em;
+}
+
+.header-strip::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 80%;
+  background-image: linear-gradient(
+    270deg,
+    rgba(255, 137, 93, 1) 0%,
+    rgba(223, 78, 19, 1) 0%,
+    rgba(255, 165, 29, 1) 100%
+  );
+}
+
+.header-strip-text {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-weight: var(--bolder-weight);
+}
+
+/* HEADER TITLE */
+
+.header-title {
+  color: var(--primary-color);
+  font-weight: var(--light-weight);
+  text-align: center;
+  max-width: 250px;
+  margin-bottom: 2em;
+}
+
+.header-title strong {
+  font-weight: var(--bolder-weight);
+}
+
+.header-title span {
+  text-transform: uppercase;
+}
+/* HEADER SUBTITLE */
+
+.header-subtitle {
+  color: var(--secondary-color);
+  font-size: 21px;
+  line-height: 27px;
+  font-weight: var(--bolder-weight);
+  text-transform: uppercase;
+  margin-bottom: 1.524em;
+}
+/* --------------------------------------------------------- */
+
+main {
+  background-color: #000;
+}
