@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  /* overflow: hidden; */
 }
 
 header,
@@ -182,7 +183,35 @@ input::placeholder {
   color: var(--footer-txt-color);
 }
 
+@media (min-width: 570px) {
+  .form {
+    padding: 0 5em;
+  }
+
+  .main-description {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 700px) {
+  .header-title {
+    max-width: 330px;
+  }
+
+  .form {
+    padding: 0 12em;
+  }
+
+  .main-description {
+    max-width: 450px;
+  }
+}
+
 @media (min-width: 960px) {
+  .form {
+    padding: 0 2em;
+  }
+
   .wrapper {
     flex-direction: row;
   }
@@ -216,6 +245,10 @@ input::placeholder {
   /* HEADER SUBTITLE */
   .header-subtitle {
     margin-bottom: 0;
+  }
+
+  .main-description {
+    max-width: unset;
   }
 }
 
